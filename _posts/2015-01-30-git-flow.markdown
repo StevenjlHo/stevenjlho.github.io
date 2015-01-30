@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Git Flow 介绍"
+date:   2015-01-30
+categories: git
+---
+
+### 主要的分支
+
+* `master`分支是为上线代码的分支。
+* `develop`分支是为下次发布的开发分支，包含许多新添加的特性。
+
+### 特性分支(`Feature branches`)
+
+特性分支一般用来开的特性，或者是一些将来的功能。合并是使用git merge --no-ff，表示合并会创建一个新的提交，这样这样清楚的表示这也是一个分支，而且把所有的提交都集中成一个提交。
+
+1. 将从这个分支分出: develop
+2. 必须合并回: develop
+3. 分支命名约定: *feature-*
+
+### 发布分支(`Release branches`)
+
+发布分支是为了新产品的发布而准备，当产品需要发布时，这时候就要创建发布分支来确定产品版本。
+
+1. 将从这个分支分出: develop
+2. 必须合并回: develop and master
+3. 分支命名约定: *release-*
+
+### 热修复分支(`Hotfix branches`)
+
+热修复分支与发布分支非常相似。当产品出现严重的bug而需要解决时，可以从master分支分出，修复后再合并到master分支与develop分支。
+
+1. 将从这个分支分出: master
+2. 必须合并回: develop and master
+3. 分支命名约定: *hotfix-*
+
+
+**可以安装[Git Flow](https://github.com/nvie/gitflow "Git Flow")插件来简化操作，Git flow的操作说明可参考[这篇文章](http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/)。**
