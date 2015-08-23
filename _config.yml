@@ -9,4 +9,5 @@ github_username: stevenjlho
 
 # Build settings
 markdown: kramdown
-kramdown: GFM
+kramdown:
+    input: GFM
