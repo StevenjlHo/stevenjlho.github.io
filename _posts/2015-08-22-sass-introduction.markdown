@@ -12,13 +12,13 @@ categories: sass
 
 ```css
 .panel {
-	border: 1px solid #ccc;
+    border: 1px solid #ccc;
 }
 .panel .header {
-	border-bottom: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
 }
 .panel .footer {
-	border-top: 1px solid #ccc;
+    border-top: 1px solid #ccc;
 }
 ```
 
@@ -26,16 +26,16 @@ categories: sass
 
 ```css
 .panel {
-	border: 1px solid #ccc;
-	
-	.header {
-		border-bottom: 1px solid #ccc;
-	}
-	.footer {
-		border-top: 1px solid #ccc;
-	}
+    border: 1px solid #ccc;
+    .header {
+	    border-bottom: 1px solid #ccc;
+    }
+    .footer {
+        border-top: 1px solid #ccc;
+    }
 }
 ```
+
 使用嵌套的话不仅仅结构更加清晰了，而且也更容易维护，学习的门槛也比较低，非常适合初学者使用。**需要注意的是嵌套尽量不要大于三层，不然会导致结构复杂，可读性差。**
 
 
